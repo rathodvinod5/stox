@@ -34,3 +34,22 @@ const StockListItems = ({
 }
 
 export default StockListItems;
+
+
+export const RowItem = ({
+  title,
+  amount
+}: {
+  title: string,
+  amount: number
+}) => {
+
+  return (
+    <View style={STYLES.stockListItems}>
+      <Text style={STYLES.symbolText}>{title}</Text>
+      <View style={STYLES.flexRow}>
+        <Text>{indianCurrencyFormat(Number(amount))}</Text>
+      </View>
+    </View>
+  );
+}
