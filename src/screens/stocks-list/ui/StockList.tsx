@@ -64,11 +64,11 @@ const StockListScreen = () => {
                     currentValue={stocksData?.totalCurrentValue}
                     totalInvestment={stocksData.totalCurrentValue}
                     todaysProfitNLoss={stocksData.todaysPNL}
-                    todaysPNL={stocksData.todaysPNL}
+                    totalPNL={stocksData.totalPNL}
                   />
                 ) : (
                   <View style={{ position: 'absolute', bottom: 0 }}>
-                    <RowItem title="Profit & Loss:" amount={stocksData.todaysPNL} />
+                    <RowItem title="Profit & Loss:" amount={stocksData.totalPNL} />
                   </View>
                 )}
               </View>

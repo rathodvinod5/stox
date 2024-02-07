@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { StocksContextDataType, StocksDataResponseType, StocksDataType } from "../types/StocksListTypes";
+import { StocksDataResponseType } from "../types/StocksListTypes";
 import { fetchData } from "../../../network/FetchCallApi";
 
 
@@ -52,8 +52,8 @@ const useStockListController = () => {
 
       newData.totalCurrentValue = totalCurrentValue;
       newData.totalInvestment = totalInvestmentValue;
+      newData.todaysPNL = todaysPNL;
       newData.totalPNL = totalPNL;
-      newData.todaysPNL = totalPNL;
 
       if (error) setError(false);
       setStocksList(newData);
