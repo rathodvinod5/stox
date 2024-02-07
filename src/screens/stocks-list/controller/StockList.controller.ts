@@ -13,7 +13,7 @@ const useStockListController = () => {
     if (!isLoading && !stocksData) {
       getData();
     }
-  }, []); //isLoading, stocksList
+  }, [isLoading, stocksData]); //
 
   const getData = async () => {
     console.log('in getData');
