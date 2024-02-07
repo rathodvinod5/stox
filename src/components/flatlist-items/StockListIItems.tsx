@@ -25,7 +25,7 @@ const StockListItems = ({
         <View style={STYLES.flexRow}>
           <Text>P/L: </Text>
           <Text style={STYLES.currencyText}>
-            {indianCurrencyFormat(Number(item.ltp))}
+            {indianCurrencyFormat(Number(item.pnl))}
           </Text>
         </View>
       </View>
@@ -34,3 +34,22 @@ const StockListItems = ({
 }
 
 export default StockListItems;
+
+
+export const RowItem = ({
+  title,
+  amount
+}: {
+  title: string,
+  amount?: number | undefined | string
+}) => {
+
+  return (
+    <View style={STYLES.stockListItems}>
+      <Text style={STYLES.symbolText}>{title}</Text>
+      <View style={STYLES.flexRow}>
+        {amount ? <Text>{indianCurrencyFormat(Number(amount))}</Text> : ''}
+      </View>
+    </View>
+  );
+}

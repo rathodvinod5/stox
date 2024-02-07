@@ -20,11 +20,11 @@ const styles = StyleSheet.create({
     // paddingVertical: 12,
     marginVertical: 10,
     flexDirection: 'column',
-    justifyContent: 'center',
+    justifyContent: 'space-evenly',
     alignItems: 'center'
   },
   stockListItems: {
-    flex: 1,
+    // flex: 1,
     width: '100%',
     flexDirection: 'row',
     justifyContent: 'space-between',
